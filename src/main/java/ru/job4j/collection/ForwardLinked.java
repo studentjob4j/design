@@ -28,6 +28,11 @@ public class ForwardLinked<T> implements Iterable<T> {
         tail.next = node;
     }
 
+    /**
+     * Получаем 1 элемент из стека и хед переходит на следующую ноду
+     * @return T
+     */
+
     public T deleteFirst() {
         Node<T> temp = null;
         if (head == null) {
@@ -37,6 +42,21 @@ public class ForwardLinked<T> implements Iterable<T> {
         head = temp;
         head = result.next;
         return result.value;
+    }
+
+    /**
+     * Добавляем элемент в стек и хед переносится в добавленный элемент
+     * @param value значение новой ноды
+     */
+    public void addFirst(T value) {
+        Node<T> newNode = new Node(value, null);
+        if (head == null) {
+            head = newNode;
+            return;
+        }
+        Node<T> second = head;
+        head = newNode;
+        head.next = second;
     }
 
     @Override
