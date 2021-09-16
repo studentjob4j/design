@@ -1,6 +1,8 @@
 package ru.job4j.collection;
 
 import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Без переопределения equals and hashcode   два объекта имеют разный хеш и лежат в разных бакетах
