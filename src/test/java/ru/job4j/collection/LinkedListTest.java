@@ -1,6 +1,8 @@
 package ru.job4j.collection;
 
 import org.junit.Test;
+import ru.job4j.collection.list.LinkedList;
+
 import java.util.ConcurrentModificationException;
 import java.util.Iterator;
 import static org.hamcrest.core.Is.is;

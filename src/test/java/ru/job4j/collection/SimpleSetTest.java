@@ -2,6 +2,10 @@ package ru.job4j.collection;
 
 import org.junit.Before;
 import org.junit.Test;
+import ru.job4j.collection.list.SimpleArray;
+import ru.job4j.collection.set.Set;
+import ru.job4j.collection.set.SimpleSet;
+
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 

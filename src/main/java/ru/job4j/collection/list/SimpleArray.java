@@ -1,4 +1,6 @@
-package ru.job4j.collection;
+package ru.job4j.collection.list;
+
+import ru.job4j.collection.list.List;
 
 import java.util.*;
 

@@ -3,6 +3,9 @@ package ru.job4j.collection;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import ru.job4j.collection.list.List;
+import ru.job4j.collection.list.SimpleArray;
+
 import java.util.ConcurrentModificationException;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
