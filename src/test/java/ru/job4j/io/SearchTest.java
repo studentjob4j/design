@@ -26,4 +26,39 @@ public class SearchTest {
         assertThat(list.size(), is(list.size()));
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void whenNoValidParametrDirectory() {
+        Search search = new Search();
+        String[] array = new String[2];
+        array[0] = null;
+        array[1] = "txt";
+        search.valid(array);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void whenNoValidParametrEndWith() {
+        Search search = new Search();
+        String[] array = new String[2];
+        array[0] = ".";
+        array[1] = null;
+        search.valid(array);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void whenParametrOnlyOne() {
+        Search search = new Search();
+        String[] array = new String[1];
+        array[0] = ".";
+        search.valid(array);
+    }
+
+    @Test
+    public void whenAllParametrsValid() {
+        Search search = new Search();
+        String[] array = new String[2];
+        array[0] = ".";
+        array[1] = "txt";
+        assertThat(search.valid(array), is(true));
+    }
+
 }
