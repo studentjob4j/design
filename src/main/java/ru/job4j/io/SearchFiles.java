@@ -19,9 +19,9 @@ import java.util.function.Predicate;
 public class SearchFiles extends SimpleFileVisitor<Path> {
 
     private List<Path> list = new ArrayList<>();
-    private Predicate<String> predicate;
+    private Predicate<Path> predicate;
 
-    public SearchFiles(Predicate<String> predicate) {
+    public SearchFiles(Predicate<Path> predicate) {
         this.predicate = predicate;
     }
 
@@ -31,9 +31,8 @@ public class SearchFiles extends SimpleFileVisitor<Path> {
 
     @Override
     public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
-        Path temp = file.getFileName();
-        if (predicate.test(temp.toString())) {
-            list.add(temp);
+        if (predicate.test(file)) {
+            list.add(file);
         }
         return FileVisitResult.CONTINUE;
     }
