@@ -1,5 +1,8 @@
 package ru.job4j.socket;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import ru.job4j.log.UsageLog4j;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -19,6 +22,8 @@ import java.util.function.Consumer;
  */
 
 public class EchoServer {
+
+    private static final Logger LOG = LoggerFactory.getLogger(UsageLog4j.class.getName());
 
 // Хранилише заданных ответов содержит по ключу объекты outputstream , которые отправляют
 // ответ от сервера пользователю
@@ -45,7 +50,7 @@ public class EchoServer {
                 }
             }
         } catch (Exception e) {
-           e.printStackTrace();
+          LOG.error("Exception in stream", e);
         }
     }
 
@@ -57,7 +62,7 @@ public class EchoServer {
                 out.write("Hello my dear friend\r\n\r\n".getBytes());
 
             } catch (IOException e) {
-                e.printStackTrace();
+                LOG.error("Exception in write stream", e);
             }
         });
         MAPA.put("Any", x -> {
@@ -65,7 +70,7 @@ public class EchoServer {
                 x.write("What\r\n\r\n".getBytes());
 
             } catch (IOException e) {
-                e.printStackTrace();
+                LOG.error("Exception in write stream", e);
             }
         });
         MAPA.put("Exit", x -> {
@@ -73,7 +78,7 @@ public class EchoServer {
                 x.write("GoodBye My Dear friend\r\n\r\n".getBytes());
                 server.close();
             } catch (IOException e) {
-                e.printStackTrace();
+                LOG.error("Exception in write stream", e);
             }
         });
     }
@@ -96,7 +101,7 @@ public class EchoServer {
                 // значение по умолчанию
                 outputStream.write("I Don't understand\r\n\r\n".getBytes());
             } catch (IOException e) {
-                e.printStackTrace();
+                LOG.error("Exception in write stream", e);
             }
         }).accept(out);
     }
