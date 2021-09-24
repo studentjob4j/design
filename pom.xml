@@ -61,6 +61,13 @@
             <artifactId>jaxb-runtime</artifactId>
             <version>2.3.1</version>
         </dependency>
+
+        <!--Библиотека для преобразования Json v JsonObject , JsonArray ... -->
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20200518</version>
+        </dependency>
     </dependencies>
 
     <build>
