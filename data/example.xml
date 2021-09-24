@@ -1,0 +1,14 @@
+<?xml version="1.1" encoding="UTF-8" ?>
+
+<example value="true" data="2021">
+    <text>Thursday</text>
+    <contacts>
+        <zipCode>12345</zipCode>
+        <phone>1122</phone>
+    </contacts>
+    <arrays>
+        <text></text>
+        <data></data>
+        <value></value>
+    </arrays>
+</example>
