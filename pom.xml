@@ -134,10 +134,10 @@
                             <goal>shade</goal>
                         </goals>
                         <configuration>
-                            <finalName>duplicatesFinder</finalName>
+                            <finalName>searchFilesByParametr</finalName>
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>ru.job4j.io.DuplicatesFinder</mainClass>
+                                    <mainClass>ru.job4j.io.SearchFilesByParametr</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>
