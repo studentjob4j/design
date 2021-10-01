@@ -1,0 +1,18 @@
+insert into status(status ) values ('true');
+select * from status;
+insert into rules(description) values ('descrption a bit');
+select * from rules;
+insert into category(description) values ('some text');
+select * from category;
+insert into anyUser(name, birhday) values ('some name', '2020-10-23');
+select * from anyUser;
+insert into role(profession, anyuser_id)  values ('agent007', 1);
+select * from role;
+insert into role_rules(id_role, id_rules) values (1, 1);
+select * from role_rules;
+insert into item(name, category_id, status_id, anyuser_id)  values ('name', 1, 1, 1);
+select * from item;
+insert into comments(description, item_id) values ('sometext', 1);
+select * from comments;
+insert into attachs(dataCreate, attaches_id) values ('2021-10-21', 1);
+select * from attachs;
