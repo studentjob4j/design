@@ -75,6 +75,11 @@ insert into devices_people(device_id, people_id) values (5, 3);
 insert into devices_people(device_id, people_id) values (6, 3);
 select * from devices_people;
 
+/* выводим среднюю цену устройств */
 select avg(price) from devices;
+
+/* вывести для каждого человека среднюю цену его устройств. */
 select p.name, avg(d.price)from people as p join devices d on p.id = d.id group by p.name;
+
+/* вывести для каждого человека среднюю цену его устройств которая больше 12 */
 select p.name, avg(d.price) from people as p join devices d on p.id = d.id group by p.name having avg(d.price) > 12;
