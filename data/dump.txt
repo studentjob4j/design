@@ -1,0 +1,5 @@
+Petr Arsentev;parsentev@yandex.ru;
+Ivan Ivanov;iivanov@gmail.com;
+Maksim Kondratov;maks@mail.ru;
+Vasya Pupkin;pupkin@gmail.com;
+Rolton Doshirakovich;box@yandex.ru;
